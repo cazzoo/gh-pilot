@@ -1,0 +1,28 @@
+{
+  "name": "gh-pilot",
+  "version": "0.1.0",
+  "description": "AI-assisted GitHub issue planner and triage CLI",
+  "main": "dist/index.js",
+  "bin": {
+    "gh-pilot": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node src/index.ts",
+    "start": "node dist/index.js"
+  },
+  "keywords": ["github", "cli", "planner", "issue-triage", "ai"],
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^12.0.0",
+    "openai": "^4.50.0",
+    "chalk": "^5.3.0",
+    "ora": "^8.0.0",
+    "node-fetch": "^3.3.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "ts-node": "^10.9.0",
+    "@types/node": "^20.0.0"
+  }
+}
