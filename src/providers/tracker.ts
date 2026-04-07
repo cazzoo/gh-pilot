@@ -1,4 +1,5 @@
 import { TrackerProvider } from "../types";
+import { GitHubTracker } from "./github";
 
 /**
  * Factory to get the default tracker provider.
@@ -6,6 +7,5 @@ import { TrackerProvider } from "../types";
  * to add GitLab, Bitbucket, etc. later.
  */
 export function getTracker(): TrackerProvider {
-  const { GitHubTracker } = require("./github");
   return new GitHubTracker();
 }

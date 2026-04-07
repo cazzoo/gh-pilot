@@ -18,7 +18,7 @@ export async function planIssue(issueRef: string, options: PlanOptions): Promise
   let issueNumber: number;
   if (issueRef === "next") {
     console.log(chalk.dim("Finding next unassigned issue..."));
-    issues = await tracker.listIssues({ repo, state: "open", limit: 10 });
+    const issues = await tracker.listIssues({ repo, state: "open", limit: 10 });
     const unassigned = issues.find((i) => !i.assignee);
     if (!unassigned) {
       console.log(chalk.yellow("No unassigned open issues found."));
